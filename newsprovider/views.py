@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
 from newsprovider.models import Author, Article
 from newsprovider.serializers import AuthorSerializer, ArticleSerializer
 
@@ -19,6 +19,7 @@ class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
   serializer_class = ArticleSerializer
   
 class ArticleListCategory(generics.ListAPIView):
+  permission_classes = (permissions.AllowAny,)
   serializer_class = ArticleSerializer
   
   def get_queryset(self):
@@ -27,4 +28,4 @@ class ArticleListCategory(generics.ListAPIView):
     if (category is not None):
       return Article.objects.filter(category=category)  
     
-    return Article.objects.all()  
+    return Article.objects.all()
