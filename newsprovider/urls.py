@@ -1,9 +1,13 @@
 from django.urls import path
-from .views import AuthorList, AuthorDetail, ArticleList, ArticleDetail
+from newsprovider.views import AuthorList, AuthorDetail, ArticleList, ArticleDetail, ArticleListCategory
 
 urlpatterns = [
-  path('authors/<int:pk>/', AuthorDetail.as_view()),
-  path('authors/', AuthorList.as_view()),
-  path('articles/<int:pk>/', ArticleDetail.as_view()),
-  path('articles/', ArticleList.as_view()),
+  #authors
+  path('admin/authors/<int:pk>/', AuthorDetail.as_view()),
+  path('admin/authors/', AuthorList.as_view()),
+  
+  #articles
+  path('admin/articles/<int:pk>/', ArticleDetail.as_view()),
+  path('admin/articles/', ArticleList.as_view()),
+  path('articles/', ArticleListCategory.as_view()),
 ]
