@@ -14,9 +14,19 @@ class ArticleSerializer(serializers.ModelSerializer):
     fields = ('id', 'author', 'category', 'title', 'summary')
     model = Article
 
-class ArticleCreateSerializer(serializers.ModelSerializer):
+class ArticleAdminSerializer(serializers.ModelSerializer):
+  author = AuthorSerializer()
+  firstParagraph = serializers.CharField(source='first_paragraph')
+  
   class Meta:
-    fields = ('id', 'author', 'category', 'title', 'summary')
+    fields = ('id', 'author', 'category', 'title', 'summary', 'firstParagraph', 'body')
+    model = Article
+
+class ArticleCreateSerializer(serializers.ModelSerializer):
+  firstParagraph = serializers.CharField(source='first_paragraph')
+  
+  class Meta:
+    fields = ('id', 'author', 'category', 'title', 'summary', 'firstParagraph', 'body')
     model = Article    
     
 class ArticleRetrieveSerializer(serializers.ModelSerializer):
