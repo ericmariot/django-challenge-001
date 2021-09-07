@@ -47,3 +47,4 @@ You can access locally, after running ```python manage.py runserver``` from the 
  - [DRF Documentation](https://www.django-rest-framework.org/)
  - [Django Documentation](https://docs.djangoproject.com/en/3.2/)
  - [Insomnia](https://insomnia.rest/)
+ - [djecrety](https://djecrety.ir/)
