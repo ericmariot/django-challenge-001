@@ -37,7 +37,7 @@ class ArticleRetrieveSerializer(serializers.ModelSerializer):
     fields = ('id', 'author', 'category', 'title', 'summary', 'firstParagraph')
     model = Article
     
-class ArticleAdminRetrieveSerializer(serializers.ModelSerializer):
+class ArticleAuthenticatedRetrieveSerializer(serializers.ModelSerializer):
   author = AuthorSerializer()
   firstParagraph = serializers.CharField(source='first_paragraph')
   
