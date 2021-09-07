@@ -10,7 +10,7 @@ articles by id, showing different responses if the user is authenticated or not.
 [TODO]
 
 ## API collection
-[TODO]
+Insomnia collection as a file (django-challenge-001-insomnia)
 
 ## API documentation
 [TODO]
