@@ -21,12 +21,8 @@ Enter the cloned repo and start the virtual enviroment:
 Migrate the tables with:
 - ```$ python manage.py migrate```
 
-Install Pillow:
-- ```$ pip install Pillow```
-
 Install packages from Pipfile:
 - ```$ pipenv install```
-
 
 Create a new SECRET_KEY, it can be done with this wonderful website [djecrety](https://djecrety.ir/), once generated set the SECRET_KEY as a environment variable, likewise:
 - ```$ export $SECRET_KEY=EXAMPLE_h&h4vr21!ew!a3ewh*#9@c)2_+hou)*a06n7ebb@c@```
