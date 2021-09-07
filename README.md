@@ -35,8 +35,7 @@ ___ATTENTION!___ Use a different SECRET_KEY to run on production.
 Run the server:
 - ```$ python manage.py runserver```
 
-See if it works [here](http://localhost:8000/api/articles/), if running in port :8000, or making a request in [insomnia](https://insomnia.rest/) or some other program of your preference, a list of
-endpoints can be found in the 'newsprovider/urls.py', every one of them starts with '/api/'
+See if it works [here](http://localhost:8000/api/articles/), if running in port :8000, or making a request in [insomnia](https://insomnia.rest/) or some other program of your preference.
 
 ## How to run the application in a Docker container for production
 [TODO]
