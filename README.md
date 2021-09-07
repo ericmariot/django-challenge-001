@@ -13,7 +13,7 @@ articles by id, showing different responses if the user is authenticated or not.
 Insomnia collection as a file (django-challenge-001-insomnia)
 
 ## API documentation
-You can access locallyn after running ```python manage.py runserver``` from:
+You can access locally, after running ```python manage.py runserver``` from:
 http://localhost:8000/swagger/
 or
 http://localhost:8000/redoc/
