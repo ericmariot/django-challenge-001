@@ -18,15 +18,21 @@ Go into your prefered directory and clone the repo:
 Enter the cloned repo and start the virtual enviroment:
 - ```$ pipenv shell```
 
-Migrate the tables with:
-- ```$ python manage.py migrate```
-
 Install packages from Pipfile:
 - ```$ pipenv install```
 
-Create a new SECRET_KEY, it can be done with this wonderful website [djecrety](https://djecrety.ir/), once generated set the SECRET_KEY as a environment variable, likewise:
-- ```$ export $SECRET_KEY=EXAMPLE_h&h4vr21!ew!a3ewh*#9@c)2_+hou)*a06n7ebb@c@```
+Create a new SECRET_KEY, it can be done with this wonderful website [djecrety](https://djecrety.ir/), once generated set the SECRET_KEY as an environment variable, likewise:
+- ```$ export SECRET_KEY=EXAMPLE_hah4vr21aewaa3ewh*#9@ca2_+houa*a06n7ebb@c@```
+
 ___ATTENTION!___ Use a different SECRET_KEY to run on production.
+
+Create another env var for DEBUG:
+- ```$ export DEBUG=1```
+
+___ATTENTION!___ To run for production set: ```$ export DEBUG=0```
+
+Migrate the tables with:
+- ```$ python manage.py migrate```
 
 Run the server:
 - ```$ python manage.py runserver```
