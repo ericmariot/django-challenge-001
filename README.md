@@ -15,11 +15,11 @@ Install pipenv for easier packages installation:
 Go into your prefered directory and clone the repo:
 - ```$ git clone https://github.com/ericmariot/django-challenge-001.git```
 
-Enter the clonde repo and migrate the tables with:
-- ```$ python manage.py migrate```
-
-Run the virtual enviroment:
+Enter the cloned repo and start the virtual enviroment:
 - ```$ pipenv shell```
+
+Migrate the tables with:
+- ```$ python manage.py migrate```
 
 Install Pillow:
 - ```$ pip install Pillow```
@@ -27,14 +27,16 @@ Install Pillow:
 Install packages from Pipfile:
 - ```$ pipenv install```
 
-Change the SECRET_KEY on the config/settings.py for a secret key, you can use this webiste [djecrety](https://djecrety.ir/) to generate a key, then copy and paste 
-to the 'SECRET_KEY = "secret_key_goes_here"'. Change the SECRET_KEY to run on production.
+
+Create a new SECRET_KEY, it can be done with this wonderful website [djecrety](https://djecrety.ir/), once generated set the SECRET_KEY as a environment variable, likewise:
+- ```$ export $SECRET_KEY=EXAMPLE_h&h4vr21!ew!a3ewh*#9@c)2_+hou)*a06n7ebb@c@```
+___ATTENTION!___ Use a different SECRET_KEY to run on production.
 
 Run the server:
 - ```$ python manage.py runserver```
 
-See if it works [here](http://localhost:8000/api/articles/) if running in port :8000, or making a request in insomnia or some other program of your preference, a list of
-endpoints can be found in the 'newsprovider/urls.py', everyone one of them starts with '/api/'
+See if it works [here](http://localhost:8000/api/articles/), if running in port :8000, or making a request in [insomnia](https://insomnia.rest/) or some other program of your preference, a list of
+endpoints can be found in the 'newsprovider/urls.py', every one of them starts with '/api/'
 
 ## How to run the application in a Docker container for production
 [TODO]
@@ -51,3 +53,4 @@ Swagger - http://localhost:8000/swagger/ || Redoc - http://localhost:8000/redoc/
  - [Classy DRF](https://www.cdrf.co/)
  - [DRF Documentation](https://www.django-rest-framework.org/)
  - [Django Documentation](https://docs.djangoproject.com/en/3.2/)
+ - [Insomnia](https://insomnia.rest/)
