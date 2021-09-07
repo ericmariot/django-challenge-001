@@ -1,6 +1,6 @@
 from rest_framework import generics, permissions
 from newsprovider.models import Author, Article
-from newsprovider.serializers import AuthorSerializer, ArticleSerializer, UserSerializer, ArticleRetrieveSerializer, ArticleCreateSerializer, ArticleAdminRetrieveSerializer, ArticleAdminSerializer
+from newsprovider.serializers import AuthorSerializer, ArticleSerializer, UserSerializer, ArticleRetrieveSerializer, ArticleCreateSerializer, ArticleAuthenticatedRetrieveSerializer, ArticleAdminSerializer
 from django.contrib.auth.models import User
 
 # authors
@@ -40,7 +40,7 @@ class ArticleRetrieveView(generics.RetrieveAPIView):
   
   def get_serializer_class(self):
     if self.request.user.is_authenticated:
-      return ArticleAdminRetrieveSerializer
+      return ArticleAuthenticatedRetrieveSerializer
     else:
       return ArticleRetrieveSerializer
   
