@@ -41,12 +41,10 @@ See if it works [here](http://localhost:8000/api/articles/), if running in port 
 [TODO]
 
 ## API collection
-Insomnia collection as a file (django-challenge-001-insomnia)
+Insomnia collection as a file (django-challenge-001-insomnia).
 
 ## API documentation
-You can access locally, after running ```python manage.py runserver``` from:
-
-Swagger - http://localhost:8000/swagger/ || Redoc - http://localhost:8000/redoc/
+You can access locally, after running ```python manage.py runserver``` from the [Documentation](http://localhost:8000/swagger/) endpoint.
 
 ## Links that helped me
  - [Classy DRF](https://www.cdrf.co/)
